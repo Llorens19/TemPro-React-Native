@@ -1,7 +1,7 @@
 {
   "name": "tempro",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "expo-router/entry",
   "engines": {
     "node": ">=16.0.0"
   },
@@ -17,15 +17,21 @@
   },
   "dependencies": {
     "@expo/metro-runtime": "~5.0.4",
+    "@expo/vector-icons": "^14.1.0",
     "babel-preset-expo": "~13.0.0",
     "expo": "~53.0.9",
+    "expo-constants": "~17.1.6",
+    "expo-linking": "~7.1.5",
+    "expo-router": "~5.0.7",
     "expo-status-bar": "~2.2.3",
     "nativewind": "^2.0.11",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-native": "0.79.2",
+    "react-native-paper": "^5.14.5",
+    "react-native-safe-area-context": "5.4.0",
+    "react-native-screens": "~4.10.0",
     "react-native-web": "0.20.0"
-
   },
   "devDependencies": {
     "@babel/core": "7.27.4",
