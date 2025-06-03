@@ -1,4 +1,3 @@
-import { Slot } from '@node_modules/expo-router/build';
 import { JSX } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { PaperProvider } from 'react-native-paper';
@@ -6,6 +5,7 @@ import {
   MD3LightTheme as DefaultTheme,
 } from 'react-native-paper';
 import { StatusBar } from 'expo-status-bar';
+import { Slot } from 'expo-router';
 const theme = {
   ...DefaultTheme,
   colors: {
