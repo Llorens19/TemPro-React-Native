@@ -64,7 +64,6 @@ export default [
 
       // Function rules
       'prefer-arrow-callback': 'error', // Require using arrow functions for callbacks
-      'arrow-body-style': ['error', 'as-needed'], // Require braces in arrow function body only when needed
 
       // Other rules
       'no-console': ['warn', { allow: ['warn', 'error'] }], // Warn on console usage except for console.warn and console.error
