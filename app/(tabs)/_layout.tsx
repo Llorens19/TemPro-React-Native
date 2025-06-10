@@ -3,32 +3,37 @@ import { Tabs } from 'expo-router';
 import React from 'react';
 import { Platform } from 'react-native';
 
-
 export default function TabLayout() {
-
   return (
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarStyle: Platform.select({
-          ios: {
-            position: 'absolute',
-          },
-          default: {},
-        }),
-      }}>
+        tabBarStyle: {
+          backgroundColor: '#1e1e1e', // Fondo de la barra
+          borderTopColor: '#333',     // Borde superior
+          height: Platform.OS === 'ios' ? 75 : 65,
+          paddingBottom: Platform.OS === 'ios' ? 20 : 10,
+        },
+        tabBarLabelStyle: {
+          fontSize: 12,
+          fontWeight: 'bold',
+        },
+        tabBarActiveTintColor: '#00FFAA',  // Color activo
+        tabBarInactiveTintColor: '#999999', // Color inactivo
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Noo',
-          tabBarIcon: ({ color }) => <Text>Hola</Text>,
+          title: 'Inicio',
+          tabBarIcon: ({ color }) => <Text style={{ color }}>🏠</Text>,
         }}
       />
       <Tabs.Screen
         name="explore"
         options={{
-          title: "siiii",
-          tabBarIcon: ({ color }) => <Text>Adiós</Text>,
+          title: 'Explorar',
+          tabBarIcon: ({ color }) => <Text style={{ color }}>🔍</Text>,
         }}
       />
     </Tabs>

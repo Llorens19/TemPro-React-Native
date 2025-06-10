@@ -8,15 +8,24 @@
     "scheme": "tempprocomplete",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-    "ios": {
-      "supportsTablet": true
+ "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "audio"
+        ]
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.llorens19.tempro",
+       "permissions": [
+            "WAKE_LOCK"
+          ]
     },
     "web": {
       "bundler": "metro",
@@ -33,10 +42,24 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+        [
+            "expo-notifications",
+            {
+              "sounds": [
+                "./assets/alarm.mp3"
+              ]
+            }
+          ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "12e751df-18e7-466e-8295-591665518000"
+      }
     }
   }
 }
